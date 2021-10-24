@@ -28,7 +28,7 @@ jobs:
        - name: Publish distribution to Test PyPI
          uses: pypa/gh-action-pypi-publish@master
          with:
-          password: ${{ secrets.PYPI_PASS }}
+          password: ${{ secrets.PYPI_API_KEY }}
           repository_url: https://pypi.org/project/auto-mlu/
 
             
