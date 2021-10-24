@@ -10,7 +10,6 @@ jobs:
      name: Build and publish Python distribution
      runs-on: ubuntu-20.04
      steps:
-       - run: echo "Hello world"
        with: 
          python-version: 3.8
        - name: Install dependencies
