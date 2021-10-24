@@ -10,7 +10,7 @@ jobs:
      name: Build and publish Python distribution
      runs-on: ubuntu-20.04
      steps:
-       - uses: actions/checkout@main
+       uses: actions/checkout@main
        name: Initialize Python 3.8
        uses: actions/setup-python@v1
        with: 
