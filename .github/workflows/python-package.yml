@@ -26,7 +26,7 @@ jobs:
          run: python setup.py bdist_wheel
 
        - name: Publish distribution to Test PyPI
-         uses: abdala/auto-mlu@main
+         uses: pypa/gh-action-pypi-publish@main
          with:
           password: ${{ secrets.PYPI_PASS }}
           repository_url: https://pypi.org/project/auto-mlu/
