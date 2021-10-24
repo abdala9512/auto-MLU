@@ -1,0 +1,14 @@
+name: Publish Python distributions to PyPI
+
+on:
+    push:
+    branches: [ main ]
+    pull_request:
+    branches: [ main ]
+
+jobs:
+  build-n-publish:
+     name: Build and publish Python distribution
+     runs-on: ubuntu-20.04
+     steps:
+       - run: echo "Hello world"
