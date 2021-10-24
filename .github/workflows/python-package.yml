@@ -10,9 +10,9 @@ jobs:
      name: Build and publish Python distribution
      runs-on: ubuntu-20.04
      steps:
-       uses: actions/checkout@main
+       - uses: actions/checkout@main
        - name: Initialize Python 3.8
-       uses: actions/setup-python@v1
+       - uses: actions/setup-python@v1
        with: 
          python-version: 3.8
        - name: Install dependencies
@@ -26,7 +26,7 @@ jobs:
        - run: python setup.py bdist_wheel
 
        - name: Publish distribution to Test PyPI
-         uses: abdala/auto-mlu@main
+       - uses: abdala/auto-mlu@main
        with:
           password: ${{ secrets.PYPI_PASS }}
           repository_url: https://pypi.org/project/auto-mlu/
