@@ -14,20 +14,20 @@ jobs:
        name: Initialize Python 3.8
        uses: actions/setup-python@v1
        with: 
-        python-version: 3.8
-       - name: Install dependencies
+         python-version: 3.8
+       name: Install dependencies
        run: |
             python -m pip install --upgrade pip
             pip install pytest pytest-runner   
-      - name: run Tests
-         run: python setup.py pytest
+       name: run Tests
+       run: python setup.py pytest
 
-      - name: Build binary wheel
-         run: python setup.py bdist_wheel
+       name: Build binary wheel
+       run: python setup.py bdist_wheel
 
-      - name: Publish distribution to Test PyPI
-        uses: abdala/auto-mlu@main
-      with:
+       name: Publish distribution to Test PyPI
+       uses: abdala/auto-mlu@main
+       with:
             password: ${{ secrets.PYPI_PASS }}
             repository_url: https://pypi.org/project/auto-mlu/
 
