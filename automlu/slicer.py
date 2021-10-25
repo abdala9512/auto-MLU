@@ -13,4 +13,7 @@ class Slicer:
 
     def supervised_split(self, target:str=None):
         pass
+
+    def unsupervised_split(self):
+        pass
         
